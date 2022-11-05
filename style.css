@@ -1,0 +1,169 @@
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+._container {
+    max-width: 1140px;
+    padding: 0px 15px;
+    margin: 0px auto;
+    box-sizing: content-box;
+}
+.header {
+    background-color: white;
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.page-header {
+    font-size: 24px;
+}
+/* скрываем чекбоксы и блоки с содержанием */
+.hide, .hide + label ~ div {
+    display: none; 
+    width: 700PX;
+}
+/* вид текста label */
+.hide + label,
+.hide:checked + label {
+    padding: 0;
+    color: rgb(177, 130, 216);
+    cursor: pointer;
+    border-bottom: 1px dotted rgb(177, 130, 216);
+    font-size: 16px;
+}
+/* вид текста label при активном переключателе */
+.hide:checked + label {
+    color: rgb(224, 55, 174);
+    border-bottom: 0;
+}
+/* когда чекбокс активен показываем блоки с содержанием  */
+.hide:checked + label + div {
+    display: block; 
+    background: rgb(177, 130, 216);
+    -moz-box-shadow: inset 3px 3px 10px rgb(177, 130, 216);
+    -webkit-box-shadow: inset 3px 3px 10px rgb(177, 130, 216);
+    box-shadow: inset 3px 3px 10px rgb(177, 130, 216);
+    padding: 10px; 
+}
+
+/* Таблица календаря  */
+.calendar {
+    border-collapse: collapse;
+    font-family: Arial;
+    font-size: 11px;
+}
+  /* Заголовок */
+.calendar th {
+    text-align: center;
+    width: 26px;
+    height: 20px;
+    background: #e2f2fc;
+    color: #000000;
+}
+  /* Заголовок праздника */
+.calendar th.holiday {
+    color: #FF0000;
+}
+  /* Ячейка дня */
+.calendar td {
+    text-align: right;
+    width: 20px;
+    height: 20px;
+    padding-right: 4px;
+    border: 1px solid #909090;
+    text-align: right;
+    cursor: pointer;  font-size: 12px;
+}
+  /* Затемненный день */
+.calendar td.grayed {
+    background: #F0F0F0;
+    cursor: auto;
+}
+  /* Выбранный день */
+.calendar td.selected {
+    background: #038fcf;
+    color: #FFFFFF;
+    box-shadow: 1px 1px rgba(255, 255, 255, 0.5) inset;
+}
+  /* Праздничный день */
+.calendar td.holiday {
+    color: #FF0000;
+}
+  /* Кнопки навигации */
+.calendar td.navigation {
+    text-align: center;
+    border: 0px none;
+    font-size: 16px;
+    background: #ecebeb;
+    cursor: pointer;
+    white-space: nowrap;        
+}
+
+
+div.aa { display:none; }
+
+
+
+::slotted([slot="title"]) {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    margin: 0;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+
+::slotted([slot="title"])::before {
+    content: '📂';
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    margin: 0;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+}
+
+.closed ::slotted([slot="title"])::before {
+    content: '📁';
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    margin: 0;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.closed ul {
+    display: none;
+}
+.element__eight img {
+    height: 250px;
+    position: absolute;
+    z-index: 1;
+    transition: opacity 0.8s linear;
+    
+    }
+    
+.element__eight {
+    
+    height: 250px;
+    width: 300px;
+}
+    
+.element__eight p {
+    position: absolute;
+    z-index: 0;
+    padding-left: 40px;
+    padding-top: 100px;
+}

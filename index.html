@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Java-Script</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container _container">
+                <div class="page-header">
+                    <h1>Задания по JS - Вариант 7</h1>
+                </div>
+            </div>
+        </header>
+
+        <div class="date-and-time">
+            <div class="data-and-time__container _container">
+                <div class="number-one">
+                    <input class="hide" id="hd-1" type="checkbox">
+                    <label for="hd-1">Задание 1 - Дата</label>
+                    <div id="date">
+                        <script> time();</script>
+                    </div>
+                </div>
+
+                <div class="number-one-two">
+                    <input class="hide" id="hd-2" type="checkbox">
+                    <label for="hd-2">Задание 1 - Время</label>
+                    <div id="clock">
+                        <script> setInterval(clock(), 1000);</script>
+                    </div>
+                </div>
+
+                <div class="calendar">
+                    <input class="hide" id="hd-3" type="checkbox">
+                    <label for="hd-3">Задание 2 - Календарь</label>
+                    <div id="calendar_table">
+                        <div id="clock">
+                            <script> calendar();</script>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formaa">
+                    <input class="hide" id="hd-9" type="checkbox">
+                    <label for="hd-9">Задание 9 - Форма + 10 Задание </label>
+                    <div class="forma-num">
+                        <h1>Анкета Web-разработчика</h1>
+                        <form name="Sel1">
+                            <table>
+                                <div class="formaa">
+                                    <tr>
+                                        <div class="formaa">
+                                            <td><b>Имя:<b></td>
+                                            <td><input id="Name" size=20 onFocus="className='styleField'"
+                                                    onBlur="regName()">
+                                                <div id="divName" class="warning"></div>
+                                            </td>
+                                        </div>
+                                    </tr>
+                                    <TR>
+                                        <div class="formaa">
+                                            <td><B>Пароль:<B></td>
+                                            <td><input id="Password_One" size=20 onFocus="classPassword='styleField'"
+                                                    onBlur="regPassword()">
+                                                <div id="divPassword" class="warning"></div>
+                                            </td>
+                                        </div>
+                                    </TR>
+                                    <tr>
+                                        <div class="formaa">
+                                            <td><B>Подтвердите пароль:<B></td>
+                                            <td><input id="Password_Two" size=20 onFocus="classPassword='styleField'"
+                                                    onBlur="regPassword()">
+                                                <div id="divPassword_Two" class="warning"></div>
+                                            </td>
+                                        </div>
+                                    </tr>
+                                    <TR>
+                                        <div class="formaa">
+                                            <TD><B>Телефон:<B></td>
+                                            <td><input id="Phone" size=20 onFocus="classPhone='styleField'"
+                                                    onBlur="regPhone()">
+                                                <div id="divPhone" class="warning"></div>
+                                            </td>
+                                        </div>
+                                    </TR>
+                                    <TR>
+                                        <div class="formaa">
+                                            <TD><B>Email:<B></td>
+                                            <td><input id="Email" name="Email" type="email" size="20"
+                                                    onFocus="classEmail='styleField'" onBlur="regEmail()">
+                                                <div id="divEmail" class="warning"></div><br />
+                                            </td>
+                                        </div>
+                                    </TR>
+                                    <tr>
+                                        <div class="formaa">
+                                            <td><b>Пол:</b></td>
+                                            <td><label>Ж<INPUT TYPE="radio" NAME="Code" VALUE="Ж"
+                                                        onClick="if(this.checked) CheckRadio(this.form,this.value);">
+                                                </label>
+                                                <label>М<INPUT TYPE="radio" NAME="Code" VALUE="М"
+                                                        onClick="if(this.checked) CheckRadio(this.form,this.value);">
+                                                </label>
+                                            </td>
+                                        </div>
+                                    </tr>
+                                    <TR>
+                                        <div class="formaa">
+                                            <TD><B>Факультет:<B></td>
+                                            <td><input id="facultet" name="facultet" size="20"
+                                                    onFocus="classFacultet='styleField'" onBlur="regFacultet()" /><br />
+                                                <div id="divFacultet" class="warning"></div>
+                                            </td>
+                                        </div>
+                                    </TR>
+                                    <TR>
+                                        <div class="formaa">
+                                            <TD><B>Кафедра:<B></td>
+                                            <td><input id="cafedra" name="cafedra" size="20"
+                                                    onFocus="classCafedra='styleField'" onBlur="regCafedra()" /><br />
+                                                <div id="divCafedra" class="warning"></div>
+                                            </td>
+                                        </div>
+                                    </TR>
+                                    <tr>
+                                        <div class="formaa">
+                                            <td><b>Ваши навыки: </b></td>
+                                            <td>
+                                                <INPUT TYPE="checkbox" NAME="ch" value="знание HTML и CSS">знание
+                                                HTML и
+                                                CSS<br>
+                                                <INPUT TYPE="checkbox" NAME="ch" value="знание HTML и CSS"> знание
+                                                Ruby<br>
+                                                <INPUT TYPE="checkbox" NAME="ch" value="знание HTML и CSS"> знание
+                                                Java<br>
+                                                <INPUT TYPE="checkbox" NAME="ch" value="знание HTML и CSS"> знание
+                                                Java-Script<br>
+                                                <INPUT TYPE="checkbox" NAME="ch" value="знание HTML и CSS"> знание
+                                                C++<br>
+                                                <INPUT TYPE="checkbox" NAME="ch" value="знание HTML и CSS"> знание
+                                                C#<br>
+                                                <INPUT TYPE="checkbox" NAME="ch" value="знание HTML и CSS"> знание
+                                                Perl<br>
+                                                <INPUT TYPE="checkbox" NAME="ch" value="знание HTML и CSS"> знание
+                                                SQL<br>
+                                                <INPUT TYPE="checkbox" NAME="ch" value="знание HTML и CSS"> знание
+                                                Python
+                                            </td>
+                                        </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="formaa">
+                                            <td><b>Ваша специализация: </b></td>
+                                            <td>
+                                                <select id="mySelectId" name="mySelect">
+                                                    <option value="Web-разработчик"> Web-разработчик </option>
+                                                    <option value="Разработчик (JS)"> Разработчик (JS) </option>
+                                                    <option value="Разработчик (Python)"> Разработчик (Python)
+                                                    </option>
+                                                    <option value="Разработчик SQL-данных"> Разработчик SQL-данных
+                                                    </option>
+                                                </select>
+                                            </td>
+                                        </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="formaa">
+                                            <td><b>Страна проживания: </b></td>
+                                            <td>
+                                                <select id="mySelectId" name="mySelect2">
+                                                    <option value="Россия"> Россия </option>
+                                                    <option value="Армения"> Армения </option>
+                                                    <option value="Турция"> Турция </option>
+                                                    <option value="Болгария"> Болгария </option>
+                                                </select>
+                                            </td>
+                                        </div>
+                                    </tr>
+                                </div>
+                            </table>
+                            <div class="formaa">
+                                <input TYPE="button" value="Зарегистрировать" onClick="Complete();">
+                                <input TYPE="reset" value="Отчистить форму">
+                            </div>
+                    </div>
+                    </form>
+                </div>
+
+
+                <div class="block">
+                    <input class="hide" id="hd-4" type="checkbox">
+                    <label for="hd-4">Задание 3 - Блоки</label>
+                    <div id="chec">
+                        <script> myFunc();</script>
+                    </div>
+                </div>
+
+                <div class="random">
+                    <input class="hide" id="hd-5" type="checkbox">
+                    <label for="hd-5">Задание 4 - Изменение объекта</label>
+                    <div id="ddd">
+                        <div id="sssss">
+                            <div class="aa" id="first">1</div>
+                            <div class="aa" id="second">2</div>
+                            <div class="aa" id="third">3</div>
+                        </div>
+                        <script> color();</script>
+                        <script> color_rand();</script>
+                    </div>
+                </div>
+
+                <div class="spisok">
+                    <input class="hide" id="hd-6" type="checkbox">
+                    <label for="hd-6">Задание 5 - Cписок</label>
+                    <div id="sspisoc">
+                        <div id="element">
+                            <h2>Список:</h2>
+                            <ul id="list"></ul>
+                            <button type="submit" id="submit" onclick="Add();">Добавить</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clickk">
+                    <input class="hide" id="hd-7" type="checkbox">
+                    <label for="hd-7">Задание 6 - Обработчик событий</label>
+                    <div id="element">
+                        <div id="element">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menuu">
+                    <input class="hide" id="hd-8" type="checkbox">
+                    <label for="hd-8">Задание 7 - Сладости</label>
+                    <div id="menu">
+                        <h3>Сладости</h3>
+                        <ul id="menu_ul">
+                            <li class="menu_li">Торт</li>
+                            <li class="menu_li">Пирожное</li>
+                            <li class="menu_li">Конфета</li>
+                            <li class="menu_li">Леденец</li>
+                            <li class="menu_li">Пончик</li>
+                        </ul>
+                    </div>
+                    <script>hide(end)</script>
+                </div>
+
+                <div class="photo">
+                    <input class="hide" id="hd-10" type="checkbox">
+                    <label for="hd-10">Задание 8 - Сокрытие картинки</label>
+                    <div id="element">
+                        <div class="element__eight">
+                            <p id="textlogo">It's me </p>
+                            <img id="logo" src="img/wewewewewe.jpg" alt="It's we">
+                            <script> ex8(); </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
